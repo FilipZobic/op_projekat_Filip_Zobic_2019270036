@@ -1,0 +1,197 @@
+[
+      {
+            "broj indeksa": 2019270111,
+            "lozinka": "pera",
+            "ime": "Petar",
+            "prezime": "Petrovi\u0107",
+            "email": "petar.petrovic.19@singimail.ac.rs",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "139",
+                        "sifra_profesora": "111",
+                        "ocena": 8
+                  },
+                  {
+                        "sifra_predmeta": "139",
+                        "sifra_profesora": "333",
+                        "ocena": 9
+                  },
+                  {
+                        "sifra_predmeta": "132",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 5
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  }
+            ]
+      },
+      {
+            "broj indeksa": 199200,
+            "lozinka": "123456789",
+            "ime": "Marko",
+            "prezime": "Markovic",
+            "email": "markovic@gmail.com",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "111",
+                        "ocena": 8
+                  },
+                  {
+                        "sifra_predmeta": "132",
+                        "sifra_profesora": "111",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "139",
+                        "sifra_profesora": "333",
+                        "ocena": 9
+                  },
+                  {
+                        "sifra_predmeta": "431",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "139",
+                        "sifra_profesora": "333",
+                        "ocena": 9
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  },
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "555",
+                        "ocena": 10
+                  }
+            ]
+      },
+      {
+            "broj indeksa": 20,
+            "lozinka": "1",
+            "ime": "Filip",
+            "prezime": "Markovic",
+            "email": "a@m.com",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "156",
+                        "sifra_profesora": "999",
+                        "ocena": 6
+                  }
+            ]
+      },
+      {
+            "broj indeksa": 700123,
+            "lozinka": "321",
+            "ime": "Lazar",
+            "prezime": "Lazarevic",
+            "email": "lazo@gmail.com",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "156",
+                        "sifra_profesora": "999",
+                        "ocena": 7
+                  },
+                  {
+                        "sifra_predmeta": "431",
+                        "sifra_profesora": "111",
+                        "ocena": 7
+                  },
+                  {
+                        "sifra_predmeta": "231",
+                        "sifra_profesora": "111",
+                        "ocena": 7
+                  },
+                  {
+                        "sifra_predmeta": "121",
+                        "sifra_profesora": "111",
+                        "ocena": 7
+                  },
+                  {
+                        "sifra_predmeta": "139",
+                        "sifra_profesora": "909",
+                        "ocena": 10,
+                        "id": 4
+                  }
+            ]
+      },
+      {
+            "broj indeksa": 1134,
+            "lozinka": "mare",
+            "ime": "Marko",
+            "prezime": "Markovic",
+            "email": "maremare@gmail.com",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "231",
+                        "sifra_profesora": "909",
+                        "ocena": 5
+                  }
+            ]
+      },
+      {
+            "broj indeksa": 2323,
+            "lozinka": "markoni",
+            "ime": "Marko",
+            "prezime": "Markovic",
+            "email": "m@a.com",
+            "ocene": [
+                  {
+                        "sifra_predmeta": "123",
+                        "sifra_profesora": "909",
+                        "ocena": 9
+                  }
+            ]
+      }
+]
