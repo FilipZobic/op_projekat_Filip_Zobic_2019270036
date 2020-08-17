@@ -1,4 +1,3 @@
-from user import User
 from module_csv import get_all_subjects,get_professor
 from module_json import prof_does_exist_in_json_all_students, get_student
 

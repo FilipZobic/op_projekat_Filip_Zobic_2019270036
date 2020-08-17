@@ -1,5 +1,3 @@
-from user import User
-
 from module_csv import get_professor,get_all_subjects,update_professor
 
 from module_json import students_contains_string_in_name,get_student,update_student
