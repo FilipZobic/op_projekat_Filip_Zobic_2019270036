@@ -1,5 +1,5 @@
-from professor import Prof
-from student import Stud
+from professor import menu_professor
+from student import menu_student
 from module_csv import get_professor
 from module_json import get_student
 
@@ -24,9 +24,8 @@ def login():
                     print("\nPogrešna lozinka!!!")
                     data_valid = False
             if(data_valid):
-                # setujemo dictionary ovde sa key valuima
-                user = Prof(data[0], data[1], data[2], data[3], data[4], data[5])
-                user.menu_user()
+                professor = {"code": data[0], "password": data[1], "name": data[2], "surname": data[3], "email": data[4], "consultation_time": data[5]}
+                menu_professor(professor)
         return user_exists
 
     def student_login(index):
@@ -48,9 +47,10 @@ def login():
                     print("Pogrešna lozinka!!!")
                     data_valid = False
             if(data_valid):
-                user = Stud(student['broj indeksa'],student['lozinka'],student['ime'],student['broj indeksa'],student['prezime'],student['ocene'])
-                # saljemo dictionary u menu_user metodu i tu sve menjamo
-                user.menu_user()
+                #saljem njega u menu
+                student = {"code": student['broj indeksa'], "password": student['lozinka'],
+                           "name": student['ime'], "surname": student['prezime'], "email": student['email'], "grades": student['ocene']};
+                menu_student(student)
             
         return user_exists
         

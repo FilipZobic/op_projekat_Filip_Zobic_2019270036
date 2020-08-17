@@ -3,72 +3,64 @@ from module_csv import get_all_subjects,get_professor
 from module_json import prof_does_exist_in_json_all_students, get_student
 
 
-class Stud(User):
-    grades = [{}, {}]
-    
-    def __init__(self, code, password, name, surname, email, grades):
-        self.grades = grades
-        super(Stud, self).__init__(code, password, name, surname, email)
+def menu_student(student):
 
-    def calculate_average_mark(self):
+    def calculate_average_mark():
         grade_sum = 0.0
-        student_copy, dummy = get_student(self.code,'broj indeksa')
+        student_copy, dummy = get_student(student["code"], 'broj indeksa')
 
-        self.grades = student_copy['ocene']
+        student['grades'] = student_copy['ocene']
 
-        num_grades = len(self.grades)
-        for grade in self.grades:
+        num_grades = len(student['grades'])
+        for grade in student['grades']:
             grade_sum += float(grade['ocena'])
 
         print("\nGlobalan prosek ocena je " + str(round(grade_sum/float(num_grades), 2)))
-        return grade_sum
 
-    def show_subjects(self):
-        while(True):
-            choice = input(f'\n1.Položeni\n2.Nepoloženi\n\n@Stud.{self.name}-->')
-            if(len(choice) == 0):
-                return
+    def show_subjects():
+        choice = input(f'\n1.Položeni\n2.Nepoloženi\n\n@Stud.{student["name"]}-->')
+        if(len(choice) == 0):
+            return
 
-            try:
-                choice = int(choice)
-            except ValueError:
-                print('\nGreska los format!!!')
-                continue
+        try:
+            choice = int(choice)
+        except ValueError:
+            print('\nGreska los format!!!')
+            return
 
-            all_subjects = get_all_subjects()
+        all_subjects = get_all_subjects()
 
-            student_done_subjects = self.grades
+        student_done_subjects = student['grades']
 
-            subjects_not_done = []
+        subjects_not_done = []
 
-            subjects_done = []
+        subjects_done = []
 
-            for sub in all_subjects:
-                done = False
-                for stud_sub in student_done_subjects:
-                    if(stud_sub['sifra_predmeta'] == sub[0]):
-                        done = True
-                        break
-                    else:
-                        done = False
-                if(done == False):
-                    subjects_not_done.append(sub)
+        for sub in all_subjects:
+            done = False
+            for stud_sub in student_done_subjects:
+                if(stud_sub['sifra_predmeta'] == sub[0]):
+                    done = True
+                    break
                 else:
-                    subjects_done.append(sub)
-
-            if(choice == 1):
-                print('\n\t\tSifra\t\tNaziv')
-                for subject in subjects_done:
-                    print(f'\t\t{subject[0]}\t\t{subject[1]}')
-            elif(choice == 2):
-                print('\n\t\tSifra\t\tNaziv')
-                for subject in subjects_not_done:
-                    print(f'\t\t{subject[0]}\t\t{subject[1]}')
-
+                    done = False
+            if (done == False):
+                subjects_not_done.append(sub)
             else:
-                print('\nGreska ne postoji izbor!!!')
+                subjects_done.append(sub)
 
-    def prof_info(self):
+        if(choice == 1):
+            print('\n\t\tSifra\t\tNaziv')
+            for subject in subjects_done:
+                print(f'\t\t{subject[0]}\t\t{subject[1]}')
+        elif(choice == 2):
+            print('\n\t\tSifra\t\tNaziv')
+            for subject in subjects_not_done:
+                print(f'\t\t{subject[0]}\t\t{subject[1]}')
+        else:
+            print('\nGreska ne postoji izbor!!!')
+
+    def prof_info():
 
         all_subjects = get_all_subjects()
 
@@ -81,7 +73,7 @@ class Stud(User):
             print(f'\t\t{subject[0]}\t\t{subject[1]}')
 
         try:
-            sub_code = int(input(f'\n1.Ukucaj sifru predmeta\n\n@Stud.{self.name}-->'))
+            sub_code = int(input(f'\n1.Ukucaj sifru predmeta\n\n@Stud.{student["name"]}-->'))
         except ValueError:
             print('\nGreska los format!!!')
             return
@@ -110,22 +102,22 @@ class Stud(User):
             for professor in professors:
                 print(f"\t{professor[0]}\t\t{professor[2]}\t{professor[3]}\t\t{professor[4]}\t\t{professor[5]}\n")
         else:
-            print("\nNijedan profesor ne predaje taj predmet")
+            print("\nNijedan profesor ne predaje taj predmet ili navedena sifra ne ozndacava ni jedan predmet")
 
-    def menu_user(self):
-        should_run = True
-        while(should_run):
-            try:
-                code = int(input(f'\n1.Računaj prosek\n2.Prikaži ispite\n3.Informacije o profesoru predmeta\n4.Povratak na glavni meni\n\n@Stud.{self.name}-->'))
-            except ValueError:
-                print('\nGreska los format!!!')
-                continue
-            if(code==1):
-                self.calculate_average_mark()
-            if(code==2):
-                self.show_subjects()
-            if(code==3):
-                self.prof_info()
-            if(code==4):
-                print("\nIzlogovanje....")
-                break
+    should_run = True
+    while (should_run):
+        try:
+            code = int(input(
+                f'\n1.Računaj prosek\n2.Prikaži ispite\n3.Informacije o profesoru predmeta\n4.Povratak na glavni meni\n\n@Stud.{student["name"]}-->'))
+        except ValueError:
+            print('\nGreska los format!!!')
+            continue
+        if (code == 1):
+            calculate_average_mark()
+        if (code == 2):
+            show_subjects()
+        if (code == 3):
+            prof_info()
+        if (code == 4):
+            print("\nIzlogovanje...")
+            break

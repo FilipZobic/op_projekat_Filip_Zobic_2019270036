@@ -1,6 +1,7 @@
 from login import login
 from register import register
 
+
 def main_menu():
     while(True):
         selection = input('\n1. Prijava na sistem\n2. Registracija\n3. Izlazak iz aplikacije\n\n@-->')
